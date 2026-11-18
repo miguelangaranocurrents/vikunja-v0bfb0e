@@ -354,6 +354,11 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
+	// Scroll the board while dragging close to its edge, so buckets off screen can be reached.
+	// The browser's native drag auto-scroll is too narrow and unreliable for a horizontal board.
+	forceAutoScrollFallback: true,
+	scrollSensitivity: 100,
+	scrollSpeed: 20,
 } as const
 
 const MIN_SCROLL_HEIGHT_PERCENT = 0.25
